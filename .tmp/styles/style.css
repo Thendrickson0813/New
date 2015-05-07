@@ -40,7 +40,7 @@ body {
     margin: 0 auto;
     padding: .-625em;
     /* box-shadow: 0 0 3.125em rgba(0, 0, 0, 0.8);*/
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -48,12 +48,17 @@ body {
 .navbar {
     margin-bottom: 0;
 }
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-top: 10px;
+}
 .jumbotron {
-    background-image: url(../images/brickwall.jpg);
+    background: transparent;
     margin: 0;
     padding: 3em;
     /*box-shadow: 0 0 3.125em rgba(0, 0, 0, 0.8);*/
-    background-size: 100% 100%;
+    
     color: white;
 }
 .jumbotron p {
@@ -137,59 +142,10 @@ body {
     background-image: url(../images/black.jpg);
     background-size: cover;
 }
-.myButton {
-    box-shadow: -0.25em 0.0625em 0.4375em -0.1875em #000000;
-    background: linear-gradient(to bottom, #ededed 5%, #a39b8f 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#a39b8f', GradientType=0);
-    background-color: #ededed;
-    border-radius: 0.25em;
-    border: 0.0625em solid #666347;
-    display: inline-block;
-    cursor: pointer;
-    color: #797d6d;
-    font-family: arial;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 0.0625em 3px;
-    text-decoration: none;
-}
-.myButton: hover {
-    background: linear-gradient(to bottom, #a39b8f 5%, #ededed 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a39b8f', endColorstr='#ededed', GradientType=0);
-    background-color: #a39b8f;
-}
-.myButton: active {
-    position: relative;
-    top: 0.0625em;
-}
-.myButtonNorth {
-    box-shadow: inset 0px 1px 3px 0px #91b8b3;
-    background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c', GradientType=0);
-    background-color: #768d87;
-    border-radius: 5px;
-    border: 1px solid #566963;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: arial;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 11px 23px;
-    text-decoration: none;
-    text-shadow: 0px -1px 0px #2b665e;
-}
-.myButtonNorth: hover {
-    background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87', GradientType=0);
-    background-color: #6c7c7c;
-}
-.myButtonNorth: active {
-    position: relative;
-    top: 1px;
-}
+
 .actionbar {
-    margin-left: 25%;
+    margin-left: 40%;
+    margin-top: 1.5em;
 }
 /* Images for Splash Page */
 
@@ -329,3 +285,34 @@ body {
     border-radius: 10px;
 }
 /* REGISTER SCREEN authorizaion form */
+  
+
+.btn-default {
+    box-shadow: 0px 10px 14px -7px #040505;
+    background:linear-gradient(to bottom, #050505 5%, #4c5657 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#050505', endColorstr='#4c5657',GradientType=0);
+    background-color:#050505;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:13px;
+    font-weight:bold;
+    padding:10px 30px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ced6d9;
+}
+.btn-default:hover {
+    background:linear-gradient(to bottom, #4c5657 5%, #050505 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c5657', endColorstr='#050505',GradientType=0);
+    background-color:#4c5657;
+    color: white;
+}
+.btn-default:active {
+    position:relative;
+    top:1px;
+    color: white;
+}
+.text-padding   {
+    padding: .35em 0 0 .40em;
+}
