@@ -1,0 +1,33 @@
+<ul class="nav navbar-nav navbar-right">
+    <li ng-show="signedIn()">
+        <a href="#" ng-click="logout()">Logout</a>
+    </li>
+</ul>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 cold-lg-4 col-xl-4">
+            <div class="splashImgLeft">
+                <!-- <img src="../images/dragonLeft.jpg"/> -->
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 cold-lg-4 col-xl-4">
+            <div class="auth-forms">
+                <h2>Register</h2>
+                <form ng-submit="register()">
+                    <p ng-show="error" class="text-danger">{{ error }}</p>
+                    <input type="email" ng-model="user.email" placeholder="Email" class="form-control">
+                    <br>
+                    <input type="password" ng-model="user.password" placeholder="Password" class="form-control">
+                    <br>
+                    <input type="submit" value="Register" class="btn btn-primary" />
+                </form>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 cold-lg-4 col-xl-4">
+            <div class="splashImgRight">
+                <!-- <img src="../images/dragonLeft.jpg"/> -->
+            </div>
+        </div>
+    </div>
+</div>

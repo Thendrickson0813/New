@@ -1,0 +1,119 @@
+<span class="hero centerme">THE MOST CONFUSING RPG EVER</span>
+<div class="jumbotron">
+    <div class="row">
+        <!-- Left Panel -->
+        <div ng-controller="UiLeftCtrl" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-1">
+            <div class="new">
+                <ul id="sortOne" class="sortable">
+                    <li class="resizable ui-state-default">
+                        <p class="boxHeader">Details<a href="#" class="myButton">X</a>
+                        </p>
+                        <div ng-model="weapondetails">
+                            <div>{{weapondetails}}</div>
+                        </div>
+                    </li>
+                    <li class="resizable ui-state-default">
+                        <p class="boxHeader">Room<a href="#" class="myButton">X</a>
+                        </p>
+                        <div ng-model="rooms">{{currentroom}}</div>
+                    
+                    <!-- coming in next iteration -->
+                    </li>
+                    <!-- <li class="resizable ui-state-default">
+                        <p class="boxHeader">Room Description<a href="#" class="myButton">X</a>
+                        </p>
+                        <!-- <div ng-model="rooms">{{currentdescription}}</div> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- CENTER PANEL Game veiwer -->
+        <div ng-controller="DescriptionCtrl" class="col-xs-9 col-sm-6 col-md-6 col-lg-6 col-xl-10">
+            <div class="feed">
+                <div class="roomDescriptionViewer">
+                    <p class="boxHeader">Room Description<a href="#" class="myButton">X</a>
+                    </p>
+                    <div ng-model="rooms">{{currentdescription}}</div>
+
+
+
+
+
+
+                </div>
+                <div ng-controller="UiMiddleCtrl" ng-repeat="text in textfeed track by $index" class="feeder">
+                    {{text}}
+                </div>
+            </div>
+        </div>
+        <!-- Right Panel  -->
+        <div ng-controller="UiRightCtrl" class="col-sm-3 col-md-3 col-lg-3 col-xl-1">
+            <div class="new1">
+                <ul id="sortTwo" class="sortable">
+                    <li class="resizable ui-state-default">
+                        <p class="boxHeader">Status<a href="#" class="myButton" id="character">X</a>
+                        </p>
+                        <div>
+                            <div ng-bind="playername">Name: {{playername}}</div>
+                            <div ng-bind="playerclass">Class: {{playerclass}}</div>
+                            <div ng-bind="playerhealth">Health: {{playerhealth}}</div>
+                            <div ng-model="playerCoordinates">Coords: {{playerCoordinates}}</div>
+                            <div ng-model="currentexperience">Experience: {{currentexperience.experience}}</div>
+                            <div ng-model="gold">Gold: {{currentgold.gold}}</div>
+                        </div>
+                        <div>
+
+                        </div>
+
+
+
+                    </li>
+                    <li class="resizable ui-state-default">
+                        <p class="boxHeader">Spells<a href="#" class="myButton">X</a>
+                        </p>
+                        <div>
+                            <div ng-bind="spell1">Spell: {{spell1}}</div>
+                            <div ng-bind="spell2">Spell: {{spell2}}</div>
+                        </div>
+                    </li>
+                    <li class="resizable ui-state-default">
+                        <p class="boxHeader">Inventory<a href="#" class="myButton">X</a>
+                        </p>
+                        <div>
+                            <div ng-bind="weapon">Weapon: {{weapon}}</div>
+
+
+
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+
+
+                <form class="actionbar">
+                    <div class="form-group">
+                        <button ng-click="moveUp()" type="submit" class="btn btn-default">Up</button>
+                        <button ng-click="moveDown()" type="submit" class="btn btn-default">Down</button>
+                        <button ng-click="moveLeft()" type="submit" class="btn btn-default">Left</button>
+                        <button ng-click="moveRight()" type="submit" class="btn btn-default">Right</button>
+                    </div>
+                </form>
+                <!-- <div>
+                    <form ng-submit="submitAction()">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Action">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </form>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
