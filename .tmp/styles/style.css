@@ -58,7 +58,6 @@ body {
     margin: 0;
     padding: 3em;
     /*box-shadow: 0 0 3.125em rgba(0, 0, 0, 0.8);*/
-    
     color: white;
 }
 .jumbotron p {
@@ -67,6 +66,7 @@ body {
     font-weight: 200;
     padding-left: 10px;
 }
+
 .new {
     width: 22em;
     height: 70vh;
@@ -74,7 +74,6 @@ body {
     position: relative;
     float: right;
     border-radius: 0.5em;
-    opacity: 99;
 }
 .boxHeader {
     padding: 0.25em;
@@ -118,17 +117,15 @@ body {
     margin: 0;
     padding: 0;
 }
-.sortable li {
+.sortable li{
     margin: 0 0.1875em 0.1875em 0.1875em;
-    height: 22em;
+    height: 20em;
     max-width: 20.155em;
     min-width: 20.155em;
     border-radius: 0.5em;
     color: white;
 }
-.resizable  {
-                z-index: auto;
-}
+
 .form-control {
     background-color: black;
     color: rgba(155, 133, 111, 0.6);
@@ -274,7 +271,7 @@ body {
 }
 .form-control {
     margin-top: 1em;
-    margin-bottom: 0;
+    margin-bottom: .5em;
 }
 .auth-formsRegister {
     max-width: 400px;

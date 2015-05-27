@@ -29,7 +29,7 @@ app.controller('UiMiddleCtrl', function($scope, Character, TextFeed, Rooms, $fil
         $scope.textfeed.push('North');
 
                // determine whether the game is over and if so - print to textfeed
-            if(Character.experience == Character.gameover){
+            if(Character.experience === Character.gameover){
             $scope.textfeed.push('GAME OVER');
         }
 
@@ -55,7 +55,7 @@ app.controller('UiMiddleCtrl', function($scope, Character, TextFeed, Rooms, $fil
 
             
             // if the player has never been to this room before
-            if (Rooms.rooms[0].id1.visited == false){
+            if (Rooms.rooms[0].id1.visited === false){
 
                 $scope.textfeed.push("Experience Gained: " + Rooms.rooms[0].id1.experience);
                 console.log("Experience Gained: " + Rooms.rooms[0].id1.experience);
@@ -1105,7 +1105,7 @@ app.controller('UiMiddleCtrl', function($scope, Character, TextFeed, Rooms, $fil
             console.log("Textfeed length: " + $scope.textfeed.length);
             if($scope.textfeed.length > 30)
             {
-                $scope.textfeed.length = 0;
+                $scope.textfeed.length = 28;
 
             }
 

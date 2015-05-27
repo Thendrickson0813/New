@@ -8,13 +8,18 @@ function makeMovable() {
 
         //Makes boxes Sortable
         $(function() {
-            $(".sortable").sortable();
-            $(".sortable").disableSelection();
-        });
-        $("#sortOne, #sortTwo").sortable({
-            connectWith: "#sortOne, #sortTwo"
-        });
 
+            $('#sortOne, #sortTwo').sortable({
+                appendTo: document.body,
+                connectWith: '#sortTwo, #sortOne',
+                zIndex: 9999,
+                tolerance: 'intersect',
+                helper: 'clone',
+                containment: 'parent',
+                revert: true,
+            });
+
+        });
         // Room Description Drag 
 
         setTimeout(function() {

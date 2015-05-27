@@ -4,7 +4,7 @@
         <!-- Left Panel -->
         <div ng-controller="UiLeftCtrl" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-1">
             <div class="new">
-                <ul id="sortOne" class="sortable">
+                <ul id="sortOne" class="sortable sortIndex">
                     <li class="resizable ui-state-default">
                         <p class="boxHeader">Details<a href="#" class="myButton">X</a>
                         </p>
@@ -18,11 +18,11 @@
                         <div class="text-padding" ng-model="rooms">{{currentroom}}</div>
                         <!-- coming in next iteration -->
                     </li>
-                    <!-- <li class="resizable ui-state-default">
+                    <li class="resizable ui-state-default">
                         <p class="boxHeader">Room Description<a href="#" class="myButton">X</a>
                         </p>
-                         <div ng-model="rooms">{{currentdescription}}</div> 
-                    </li> -->
+                        <div ng-model="rooms">{{currentdescription}}</div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -42,7 +42,7 @@
         <!-- Right Panel  -->
         <div ng-controller="UiRightCtrl" class="col-sm-3 col-md-3 col-lg-3 col-xl-1">
             <div class="new1">
-                <ul id="sortTwo" class="sortable">
+                <ul id="sortTwo" class="sortable sortIndex">
                     <li class="resizable ui-state-default">
                         <p class="boxHeader">Status<a href="#" class="myButton" id="character">X</a>
                         </p>
@@ -53,8 +53,6 @@
                             <div class="text-padding" ng-model="playerCoordinates">Coords: {{playerCoordinates}}</div>
                             <div class="text-padding" ng-model="currentexperience">Experience: {{currentexperience.experience}}</div>
                             <div class="text-padding" ng-model="gold">Gold: {{currentgold.gold}}</div>
-                        </div>
-                        <div>
                         </div>
                     </li>
                     <li class="resizable ui-state-default">
@@ -78,25 +76,20 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
                 <form class="actionbar">
+                </form>
+                <form ng-submit="submitAction()">
                     <div class="form-group">
-                        <button ng-click="moveUp()" type="submit" class="btn btn-default">Up</button>
-                        <button ng-click="moveDown()" type="submit" class="btn btn-default">Down</button>
-                        <button ng-click="moveLeft()" type="submit" class="btn btn-default">Left</button>
-                        <button ng-click="moveRight()" type="submit" class="btn btn-default">Right</button>
+                        <input type="text" class="form-control" placeholder="Action">
+                        <button type="submit" class="btn btn-default">Submit</button>
                     </div>
                 </form>
-                <!-- <div>
-                    <form ng-submit="submitAction()">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Action">
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </div>
-                    </form>
-
-                </div> -->
+                <button ng-click="moveRight()" type="submit" class="btn-default pull-right">Right</button>
+                <button ng-click="moveLeft()" type="submit" class="btn-default pull-right">Left</button>
+                <button ng-click="moveDown()" type="submit" class="btn btn-default pull-right">Down</button>
+                <button ng-click="moveUp()" type="submit" class="btn btn-default pull-right">Up</button>
             </div>
         </div>
     </div>
