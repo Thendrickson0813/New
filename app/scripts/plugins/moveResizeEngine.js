@@ -17,23 +17,20 @@ function makeMovable() {
                 helper: 'clone',
                 containment: 'parent',
                 revert: true,
+                forcePlaceholderSize: true
             });
 
         });
         // Room Description Drag 
 
         setTimeout(function() {
-            $('.roomDescriptionViewer').resizable({
-                ghost: true,
-                animate: true,
-                delay: 30,
-                snap: true
-            });
+
             $('.roomDescriptionViewer').slimScroll({
-                position: 'left',
-                height: '10vh',
-                railVisible: true,
+                position: 'right',
+                height: '12vh',
+                railVisible: false,
                 alwaysVisible: true,
+                distance: '-20px',
                 wheelStep: 1
             });
             $('.new').slimScroll({
@@ -53,12 +50,11 @@ function makeMovable() {
 
             // Resizes the item boxes
             $('.resizable').resizable({
-                maxWidth: 200,
-                minWidth: 200,
                 delay: 30,
                 ghost: true,
                 animate: true,
-                autoHide: true
+                autoHide: true,
+                handles: 's'
             });
         }, 0);
     });

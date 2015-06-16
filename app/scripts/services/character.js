@@ -11,16 +11,17 @@ app.service('Character', function () {
 
 
 
-  this.coordinates = [0,0];
-  this.playername = "Derick";
-  this.playerclass = "Warrior";
+  this.coordinatesX = [0];
+  this.coordinatesY = [0];
+  this.playername = 'Derick';
+  this.playerclass = 'Warrior';
   this.playerhealth = 100;
 
-  this.spell1 = "Smash Face";
-  this.spell2 = "Roundhouse Kick";
+  this.spell1 = 'Smash Face';
+  this.spell2 = 'Roundhouse Kick';
 
-  this.weapon = "Sword of Tampa";
-  this.weapondetails = "Gleaming Sword of Pain and Destruction";
+  this.weapon = 'Sword of Tampa';
+  this.weapondetails = 'Gleaming Sword of Pain and Destruction';
 
 
   
