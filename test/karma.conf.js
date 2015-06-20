@@ -34,6 +34,7 @@ module.exports = function(config) {
       'bower_components/firebase-simple-login/firebase-simple-login.js',
       'bower_components/mockfirebase/dist/mockfirebase.js',
       'bower_components/angularfire/dist/angularfire.min.js',
+      'bower_components/angular-scroll-glue/src/scrollglue.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

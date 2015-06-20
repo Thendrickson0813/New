@@ -188,19 +188,25 @@ body {
     border: 0.0625em solid grey;
     border-radius: 0.5em;
     box-shadow: 0 0 1.875em rgba(0, 0, 0, 0.8);
-    position: relative;
+    position: static;
+    display: block;
     overflow: hidden;
 }
+
 
 .feed {
     background-color: black;
     height: 70vh;
     width: 100%;
-    border-radius: 0.5em;
     box-shadow: 0 0 1.875em rgba(0, 0, 0, 0.8);
-    overflow: hidden;
 }
-
+.text-push {
+     overflow: auto;
+}
+.text-push li {
+    line-height: 1.2;
+    padding: .4em .5em;
+}
 .sortable {
     list-style-type: none;
     margin: 0;

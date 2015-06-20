@@ -40,15 +40,20 @@
         <div ng-controller="DescriptionCtrl" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-10">
             <div class="feed">
                 <div class="roomDescriptionViewer">
-                    <p class="boxHeader" ng-model="rooms">{{currentroom}}></p>
+                    <p class="boxHeader" ng-model="rooms">{{currentroom}}</p>
                     <div class="text-padding" ng-model="rooms">{{currentdescription}}</div>
                 </div>
-                <div ng-controller="UiMiddleCtrl" ng-repeat="text in textfeed track by $index" class="feeder text-padding">
-                    {{text}}
+                <div ng-controller="UiMiddleCtrl">
+                    <div scroll-glue class="text-push">
+                        <ul>
+                            <li ng-repeat="text in textfeed track by $index">
+                                {{text}}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-
         <!-- Right Panel  -->
         <div ng-controller="UiRightCtrl" class="col-sm-3 col-md-3 col-lg-3 col-xl-1 media-hide">
             <div class="new1">

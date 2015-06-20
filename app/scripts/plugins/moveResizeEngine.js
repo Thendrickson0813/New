@@ -33,6 +33,7 @@ function makeMovable() {
                 distance: '-20px',
                 wheelStep: 1
             });
+
             $('.new').slimScroll({
                 position: 'left',
                 height: '70vh',
@@ -40,6 +41,7 @@ function makeMovable() {
                 alwaysVisible: true,
                 wheelStep: 1
             });
+
             $('.new1').slimScroll({
                 position: 'right',
                 height: '70vh',
@@ -48,6 +50,14 @@ function makeMovable() {
                 wheelStep: 1
             });
 
+            $('.text-push').slimScroll({
+                position: 'right',
+                height: '56vh',
+                railVisible: true,
+                alwaysVisible: true,
+                wheelStep: 1,
+            });
+            
             // Resizes the item boxes
             $('.resizable').resizable({
                 delay: 30,
@@ -56,6 +66,7 @@ function makeMovable() {
                 autoHide: true,
                 handles: 's'
             });
-        }, 0);
+
+        });
     });
 }

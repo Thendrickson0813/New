@@ -8,19 +8,20 @@
  *
  * Main module of the application.
  */
-var app = angular
-    .module('angRPGApp', [
-        'ngAnimate',
-        'ngCookies',
-        'ngResource',
-        'ngRoute',
-        'ngSanitize',
-        'ngTouch',
-        'firebase',
-        
-        // 'Move'
-    ])
-    .constant('FIREBASE_URL', 'https://crackling-inferno-220.firebaseio.com/')
+var app = angular.module('angRPGApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'firebase',
+    'luegg.directives'
+    // 'Move'
+])
+
+
+.constant('FIREBASE_URL', 'https://crackling-inferno-220.firebaseio.com/')
     .config(function($routeProvider) {
         $routeProvider
             .when('/', {

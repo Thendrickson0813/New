@@ -18,26 +18,22 @@ app.controller('UiMiddleCtrl', function($scope, Character, TextFeed, Rooms, $fil
 
     $scope.moveUp = function() {
         $scope.playerCoordinatesX[0] = $scope.playerCoordinatesX[0] + 1;
-        $scope.textfeed.push('North');
-        $scope.textfeed.push('You walk North');
+        $scope.textfeed.push('You walk North...');
         // console.log('mainNORTH');
     };
     $scope.moveDown = function() {
         $scope.playerCoordinatesX[0] = $scope.playerCoordinatesX[0] - 1;
-        $scope.textfeed.push('South');
-        $scope.textfeed.push('You walk South');
+        $scope.textfeed.push('You walk South...');
         // console.log('mainDOWN');
     };
     $scope.moveLeft = function() {
         $scope.playerCoordinatesY[0] = $scope.playerCoordinatesY[0] - 1;
-        $scope.textfeed.push('West');
-        $scope.textfeed.push('You walk West');
+        $scope.textfeed.push('You walk West...');
         // console.log('mainLEFT');
     };
     $scope.moveRight = function() {
         $scope.playerCoordinatesY[0] = $scope.playerCoordinatesY[0] + 1;
-        $scope.textfeed.push('East');
-        $scope.textfeed.push('You walk East');
+        $scope.textfeed.push('You walk East...');
         // console.log('mainRIGHT');
     };
     $scope.move = function(moveUp, moveDown, moveLeft, moveRight) {
@@ -103,6 +99,7 @@ app.controller('UiMiddleCtrl', function($scope, Character, TextFeed, Rooms, $fil
                 console.log('first if rooms');
 
                 if (myRoom.visited === false) {
+                    $scope.textfeed.push(myRoom.description);
                     $scope.currentroom = myRoom.name;
                     $scope.currentdescription = myRoom.description;
                     $scope.textfeed.push('Experience Gained: ' + myRoom.experience);
@@ -117,6 +114,8 @@ app.controller('UiMiddleCtrl', function($scope, Character, TextFeed, Rooms, $fil
                     myRoom.visited = true;
                     console.log('second if rooms');
                 } else {
+                    $scope.textfeed.push(myRoom.name);
+                    $scope.textfeed.push(myRoom.description);
                     $scope.currentroom = myRoom.name;
                     $scope.currentdescription = myRoom.description;
                     console.log('second if rooms');
@@ -127,9 +126,8 @@ app.controller('UiMiddleCtrl', function($scope, Character, TextFeed, Rooms, $fil
                 console.log('last if rooms');
             }
         }
-        if ($scope.textfeed.length > 10) {
-            $scope.textfeed.length = 0;
-        }
+        
+        
     };
 
     // $scope.submitAction = function() {

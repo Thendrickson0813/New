@@ -11,9 +11,7 @@ app.service('Rooms', function() {
     this.rooms[0] = {
         locations: 'X1Y0',
         name: 'Ballroom',
-        description: 'You are in a beautiful ballroom. You look around and visualize the fine art on the walls and realize ' +
-            'you are not alone...The smell in the air is thick with death and perfume and your heart begins to beat faster. Who was here? ' +
-            'Who recently gave up their will to live and flooded the room with the rancid aroma of death?...',
+        description: 'You are in a beautiful ballroom. You look around and visualize the fine art on the walls and realize you are not alone...The smell in the air is thick with death and perfume and your heart begins to beat faster. Who was here? Who recently gave up their will to live and flooded the room with the rancid aroma of death?...',
         experience: 1000,
         gold: 275,
         visited: false
@@ -21,8 +19,7 @@ app.service('Rooms', function() {
     this.rooms[1] = {
         locations: 'X2Y0',
         name: 'Torture Chamber',
-        description: 'You are in blood soaked torture chamber. Corpses everywhere....Bodies hanging from hooks on the wall. How could this ' +
-            'happen? Were these the bodies that abandoned their souls in the Ballroom? Their stench appears to be similar to what was left of them...',
+        description: 'You are in blood soaked torture chamber. Corpses everywhere....Bodies hanging from hooks on the wall. How could this happen? Were these the bodies that abandoned their souls in the Ballroom? Their stench appears to be similar to what was left of them...',
         experience: 5000,
         gold: 100,
         visited: false
@@ -46,8 +43,7 @@ app.service('Rooms', function() {
     this.rooms[4] = {
         'locations': 'X5Y0',
         'name': 'Hidden Room',
-        'description': 'You are in a hidden room. You see a 80 inch flat screen television mounted flush with the wall. Playing on the ' +
-            'screen is a surveillance feed with many cameras looking inside other rooms in the house. You can see yourself in one of the rooms...',
+        'description': 'You are in a hidden room. You see a 80 inch flat screen television mounted flush with the wall. Playing on the screen is a surveillance feed with many cameras looking inside other rooms in the house. You can see yourself in one of the rooms...',
         'experience': 1000,
         'gold': 1000,
         'visited': false
