@@ -102,19 +102,16 @@ app.controller('UiMiddleCtrl', function($scope, Character, TextFeed, Rooms, $fil
                     $scope.textfeed.push(myRoom.description);
                     $scope.currentroom = myRoom.name;
                     $scope.currentdescription = myRoom.description;
-                    $scope.textfeed.push('Experience Gained: ' + myRoom.experience);
+                    $scope.textfeed.push('You sense you achieved something');
                     var a = parseInt($scope.experience);
                     var b = parseInt(myRoom.experience);
                     var c = a + b;
                     $scope.experience = c;
-                    $scope.textfeed.push('Total Experience: ' + $scope.experience);
                     Character.experience = $scope.experience;
-                    $scope.textfeed.push('Gold Gained: ' + myRoom.gold);
                     Character.gold += myRoom.gold;
                     myRoom.visited = true;
                     console.log('second if rooms');
                 } else {
-                    $scope.textfeed.push(myRoom.name);
                     $scope.textfeed.push(myRoom.description);
                     $scope.currentroom = myRoom.name;
                     $scope.currentdescription = myRoom.description;

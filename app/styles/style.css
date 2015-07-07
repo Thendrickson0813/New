@@ -82,13 +82,6 @@ q {
     quotes: none
 }
 
-blockquote: before,
-blockquote: after,
-q: before,
-q: after {
-    content: '';
-    content: none;
-}
 
 :focus {
     outline: 0;
@@ -108,11 +101,8 @@ table {
 }
 
 body {
-    margin: 0 0;
-    font-size: 1.0em;
+    font-size: .65em;
     background-image: url(../images/brickwall.jpg);
-    margin: 0 auto;
-    padding: .-625em;
     /* box-shadow: 0 0 3.125em rgba(0, 0, 0, 0.8);*/
     
     -webkit-background-size: cover;
@@ -130,8 +120,9 @@ body {
 
 .container .jumbotron,
 .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
+    /*padding-right: 60px;
+    padding-left: 60px;*/
+    
     margin-top: 10px;
 }
 
@@ -146,9 +137,9 @@ body {
 
 .jumbotron p {
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 200;
-    padding-left: 10px;
+    padding-left: .60em;
 }
 
 .new {
@@ -193,20 +184,22 @@ body {
     overflow: hidden;
 }
 
-
 .feed {
     background-color: black;
     height: 70vh;
     width: 100%;
     box-shadow: 0 0 1.875em rgba(0, 0, 0, 0.8);
 }
+
 .text-push {
-     overflow: auto;
+    overflow: auto;
 }
+
 .text-push li {
     line-height: 1.2;
     padding: .4em .5em;
 }
+
 .sortable {
     list-style-type: none;
     margin: 0;
@@ -215,7 +208,7 @@ body {
 
 .sortable li {
     margin: 0 0.1875em 0.1875em 0.1875em;
-    height: 20em;
+    height: 21em;
     width: 15em;
     border-radius: 0.5em;
     color: white;
@@ -249,9 +242,9 @@ body {
     background-color: white;
     background-position: center;
     background-size: cover;
-    width: 90%;
-    height: 30em;
-    margin: 15% auto;
+    width: 80%;
+    height: 45em;
+    margin: 10% auto;
     border: 1px solid black;
     -moz-box-shadow: 20px 30px 20px rgba(0, 0, 0, 0.9);
     -webkit-box-shadow: 20px 30px 20px rgba(0, 0, 0, 0.9);
@@ -263,9 +256,9 @@ body {
     background-color: white;
     background-size: cover;
     background-position: center;
-    width: 90%;
-    height: 30em;
-    margin: 15% auto;
+    width: 80%;
+    height: 45em;
+    margin: 10% auto;
     border: 1px solid black;
     -moz-box-shadow: -20px 30px 20px rgba(0, 0, 0, 0.9);
     -webkit-box-shadow: -20px 30px 20px rgba(0, 0, 0, 0.9);
@@ -275,7 +268,6 @@ body {
 
 .heroOne {
     max-width: 700px;
-    margin: 0 auto;
     padding: 25px 25px 25px 25px;
     -moz-box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
@@ -284,7 +276,7 @@ body {
     -moz-border-radius: 10px;
     border-radius: 80px 10px 100px 0px;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 10%;
     background: white;
 }
 
@@ -351,7 +343,7 @@ body {
     -moz-border-radius: 10px;
     border-radius: 10px;
     margin-top: 5%;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 500;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
@@ -362,12 +354,12 @@ body {
 
 .instructions li {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 14px;
     font-weight: normal;
     line-height: 1.5;
 }
 
 .instructions h1 {
+    font-size: 1.2em;
     line-height: 2;
 }
 
@@ -379,7 +371,7 @@ body {
 
 .auth-forms {
     max-width: 400px;
-    margin: 30% auto;
+    margin: 15% auto;
     background: #fff;
     padding: 25px 25px 25px 25px;
     -moz-box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
@@ -405,6 +397,13 @@ body {
 .form-control {
     margin-top: 1em;
     margin-bottom: .5em;
+    padding: .3em .3em;
+    height: 1.7em;
+    font-size: 1em;
+}
+
+.form-group {
+    margin-bottom: 0;
 }
 
 .auth-formsRegister {
@@ -431,7 +430,6 @@ body {
     background: -o-linear-gradient(top, #050505 5%, #4c5657 100%);
     background: -ms-linear-gradient(top, #050505 5%, #4c5657 100%);
     background: linear-gradient(to bottom, #050505 5%, #4c5657 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#050505', endColorstr='#4c5657', GradientType=0);
     background-color: #050505;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -439,11 +437,10 @@ body {
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    font-size: 13px;
+    font-size: .85em;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: .5em .9em;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #ced6d9;
 }
 
 .btn-default:hover {
@@ -453,7 +450,6 @@ body {
     background: -o-linear-gradient(top, #4c5657 5%, #050505 100%);
     background: -ms-linear-gradient(top, #4c5657 5%, #050505 100%);
     background: linear-gradient(to bottom, #4c5657 5%, #050505 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#4c5657', endColorstr='#050505', GradientType=0);
     background-color: #4c5657;
     color: white;
 }
@@ -464,14 +460,41 @@ body {
     color: white;
 }
 
+.myButton {
+    font-size: .65em;
+}
+
 .text-padding {
     padding: .35em 0 0 .40em;
 }
 /* media queries*/
 
+@media (min-width: 150px) and (max-width: 768px) {
+    .heroOne h1 {
+        font-size: 2.4em;
+    }
+    .heroOne p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 150px) and (max-width: 992px) {
+    .hideSplashImg {
+        display: none;
+    }
+}
+
 @media (min-width: 150px) and (max-width: 1200px) {
     .media-hide {
         display: none;
+    }
+    body {
+        padding: 0 auto;
+        margin: 0 auto;
+    }
+    .btn-default {
+        font-size: .80em;
+        padding: .5em .5em;
     }
 }
 
